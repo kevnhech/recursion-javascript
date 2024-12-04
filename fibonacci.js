@@ -15,3 +15,16 @@ function fibs(n) {
 }
 
 console.log(fibs(8));
+
+// Now write another function fibsRec which solves the same problem recursively.
+
+function fibsRec(n, arr = [0, 1]) {  
+  if (n == 0 || n == 1) {
+    return arr;
+  } else {
+    arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+    return fibsRec(n - 1, arr);
+  }
+}
+
+console.log(fibsRec(8));
